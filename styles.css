@@ -1,0 +1,526 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #000000, #050510, #0a0a2a);
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+body::before {
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(50, 50, 100, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(50, 100, 150, 0.1) 0%, transparent 40%);
+    animation: galaxyPulse 20s infinite alternate;
+}
+
+body::after {
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.1), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 40px 70px, rgba(255, 255, 255, 0.1), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 50px 160px, rgba(255, 255, 255, 0.1), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.1), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.1), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 160px 120px, rgba(255, 255, 255, 0.1), rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.2;
+    animation: twinkle 100s infinite linear;
+}
+
+@keyframes galaxyPulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.4; }
+    100% { opacity: 0.3; }
+}
+
+@keyframes twinkle {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+/* 添加一个新的星云效果 */
+.nebula {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at top left, rgba(100, 0, 100, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(0, 100, 100, 0.1) 0%, transparent 50%);
+    opacity: 0.5;
+    z-index: -1;
+    animation: nebulaPulse 30s infinite alternate;
+}
+
+@keyframes nebulaPulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0.3; }
+}
+
+/* 调整其他元素以适应新背景 */
+.card {
+    background-color: rgba(10, 10, 30, 0.6);
+    border: 1px solid rgba(100, 100, 150, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #B0E0E6;
+    text-shadow: 0 0 10px rgba(176, 224, 230, 0.5);
+}
+
+/* 其他样式保持不变 */
+
+/* 修改一些颜色以适应新背景 */
+h1, h2 {
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.card {
+    background-color: rgba(10, 10, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+#gallery::before {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px);
+}
+
+/* 添加一些深度效果 */
+.card, .social-item, .image-carousel {
+    transform: perspective(1000px) rotateX(5deg);
+    transition: transform 0.3s ease;
+}
+
+.card:hover, .social-item:hover, .image-carousel:hover {
+    transform: perspective(1000px) rotateX(0deg) scale(1.05);
+}
+
+header {
+    text-align: center;
+    padding: 60px 0 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-size: 40px;
+    color: #FFD700;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #FFD700;
+    margin: 15px auto;
+}
+
+nav {
+    margin-top: 30px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #FFD700;
+    transform: translateY(-3px);
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #FFD700;
+    margin-top: 60px;
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #FFD700;
+    margin: 15px auto;
+}
+
+.card {
+    background-color: rgba(44, 44, 44, 0.8);
+    border: 1px solid #FFD700;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.time {
+    font-size: 16px;
+    color: #B0B0B0;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.company-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #FFD700;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* 允许在小屏幕上换行 */
+}
+
+.social-item {
+    text-align: center;
+    width: 100%; /* 确保social-item占满整行 */
+    max-width: 200px; /* 限制最大宽度 */
+}
+
+.social-item img.avatar {
+    width: 120px;  /* 增加宽度 */
+    height: 120px; /* 增加高度 */
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%; /* 确保图片不会超出其容器 */
+    display: block; /* 使图片居中 */
+    margin: 0 auto; /* 使图片居中 */
+}
+
+.social-item img.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.social-item p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #B0B0B0;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .social-item {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.container {
+    display: block; /* 改为块级布局 */
+}
+
+.column {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.right-column {
+    background-color: #f8f8f8;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.image-carousel {
+    position: relative;
+    width: 100%;
+    height: 400px; /* 您可以根据需要调整高度 */
+    overflow: hidden;
+}
+
+.image-carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-carousel img.active {
+    opacity: 1;
+}
+
+.gallery-caption {
+    font-size: 18px;
+    color: #FFD700;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+#gallery {
+    margin-top: 60px;
+    text-align: center;
+    background-color: #000; /* 深色背景 */
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#gallery::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+#social h3 {
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 20px; /* 减少顶部边距 */
+}
+
+#social {
+    margin-top: 60px; /* 增加与个人经历部分的间距 */
+}
+
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+#hobbies {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.hobbies-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.hobby-item {
+    background-color: rgba(10, 10, 30, 0.6);
+    border: 1px solid rgba(100, 100, 150, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-item i {
+    font-size: 40px;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.hobby-item h3 {
+    font-size: 20px;
+    color: #B0E0E6;
+    margin-bottom: 10px;
+}
+
+.hobby-item p {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .hobby-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hobby-item {
+        width: 100%;
+    }
+}
+
+#introduction {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.intro-card {
+    background-color: rgba(10, 10, 30, 0.6);
+    border: 1px solid rgba(100, 100, 150, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 3px solid #FFD700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.intro-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.intro-content h3 {
+    font-size: 24px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.intro-content p {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.intro-details {
+    list-style-type: none;
+    padding: 0;
+}
+
+.intro-details li {
+    font-size: 14px;
+    color: #B0E0E6;
+    margin-bottom: 5px;
+}
+
+.intro-details i {
+    margin-right: 10px;
+    color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .intro-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avatar {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .intro-content {
+        text-align: center;
+    }
+}

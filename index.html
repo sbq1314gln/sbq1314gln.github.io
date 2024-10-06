@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人经历</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nebula"></div>
+    <canvas id="particleCanvas"></canvas>
+    <header>
+        <h1 id="myName">宋必青</h1>
+        <nav>
+            <a href="#introduction">个人介绍</a>
+            <a href="#experience">个人经历</a>
+            <a href="#hobbies">兴趣爱好</a>
+            <a href="#social">社交媒体</a>
+            <a href="#gallery">精美图片</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="column">
+                <section id="introduction">
+                    <h2>个人介绍</h2>
+                    <div class="intro-card">
+                        <img src="./imag/mmexport1723607223687.jpg" alt="宋必青的头像" class="avatar">
+                        <div class="intro-content">
+                            <h3>宋必青</h3>
+                            <p>大家好,我是宋必青,一名来自江西财经大学的大学生。我热爱学习,对新事物充满好奇。在校期间,我积极参与各种活动,努力提升自己的能力。我喜欢结交新朋友,欢迎大家与我交流!</p>
+                            <ul class="intro-details">
+                                <li><i class="fas fa-graduation-cap"></i> 江西财经大学</li>
+                                <li><i class="fas fa-map-marker-alt"></i> 江西省南昌市</li>
+                                <li><i class="fas fa-envelope"></i> 2053540371@qq.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="experience">
+                    <h2>个人经历</h2>
+                    <div class="card">
+                        <span class="time">2024年 - 现在</span>
+                        <h3>职位/角色名称 @ 单位/组织名称</h3>
+                        <p>一枚大学生，就读于江西财经大学，欢迎大家找我聊天。</p>
+                        <i class="company-logo fas fa-building"></i>
+                    </div>
+                    <div class="card">
+                        <span class="time">2021年 - 2024年</span>
+                        <h3>前职位名称 @ 前单位名称</h3>
+                        <p>在高中时期，担任过物理课代表一职，与同学相处和睦，乐于助人。</p>
+                        <i class="company-logo fas fa-briefcase"></i>
+                    </div>
+                </section>
+                
+                <section id="hobbies">
+                    <h2>兴趣爱好</h2>
+                    <div class="hobbies-container">
+                        <div class="hobby-item">
+                            <i class="fas fa-book"></i>
+                            <h3>阅读</h3>
+                            <p>喜欢阅读各类书籍，尤其是科幻和哲学类。</p>
+                        </div>
+                        <div class="hobby-item">
+                            <i class="fas fa-music"></i>
+                            <h3>音乐</h3>
+                            <p>喜欢听周杰伦的晴天，也喜欢许嵩的弹指一挥间，两大天王我都爱。</p>
+                        </div>
+                        <div class="hobby-item">
+                            <i class="fas fa-hiking"></i>
+                            <h3>运动</h3>
+                            <p>喜欢打篮球，喜欢跑步。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="social">
+                    <h2>社交媒体</h2>
+                    <h3>我的社交媒体账号</h3>
+                    <div class="social-icons">
+                        <div class="social-item">
+                            <i class="fab fa-qq qq-icon" data-type="qq"></i>
+                            <p>QQ: 2053540371</p>
+                        </div>
+                        <div class="social-item">
+                            <i class="fab fa-weixin" data-type="wechat"></i>
+                            <p>微信: 15979611488</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <section id="gallery">
+            <h2>我的精美图片</h2>
+            <div class="image-carousel">
+                <img src="./imgs/Image_1720429428087.jpg" alt="精美图片1" class="active">
+                <img src="./imgs/Image_1721306502629.jpg" alt="精美图片2">
+                <img src="./imgs/IMG20240709070347.jpg" alt="精美图片3">
+                <img src="./imgs/IMG20240709070351.jpg" alt="精美图片4">
+                <img src="./imgs/IMG20240709070409.jpg" alt="精美图片5">
+            </div>
+            <p class="gallery-caption">回来2024 小清新</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 小清新</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
